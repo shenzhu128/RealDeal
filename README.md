@@ -46,6 +46,7 @@ To cite our work, you can use:
 ---
 
 ### News
+**Oct. 1, 2025:** Added the required file `fractions_64.npy` in Google Drive.
 **Sept. 30, 2025:** Added script for autoencoder, latent diffusion, and patch-based diffusion.
 
 ---
@@ -54,6 +55,8 @@ To cite our work, you can use:
 - Python >= 3.11
 - PyTorch >= 2.5
 - CUDA enabled computing device
+- Download `fractions_64.npy` at [this link](https://drive.google.com/drive/folders/1opL9r4nqrAh4fqMVL3Qr_UajNoX8-lJI?usp=sharing) and put it in the data directory
+- Download checkpoints at [this link](https://drive.google.com/drive/folders/1opL9r4nqrAh4fqMVL3Qr_UajNoX8-lJI?usp=sharing)
 
 ### Installation
 ```
@@ -76,6 +79,7 @@ For the training data, we assume the following data folder structure:
 │   └── T1w/
 │       └── T1w_cropped.nii.gz
 ├── ...
+├── fractions_64.npy
 └── hcp_split.csv
 ```
 
@@ -95,6 +99,7 @@ After encoding the inputs with `EncodeHCP.py` and the provided checkpoint, your 
 │       ├── T1w_cropped.nii.gz
 │       └── T1w_encoded.npy
 ├── ...
+├── fractions_64.npy
 └── hcp_split.csv
 ```
 
@@ -116,6 +121,7 @@ You need to first find the data range for each channel of all your encodings. An
 │       ├── T1w_encoded.npy
 │       └── T1w_encoded_rescaled.npy
 ├── ...
+├── fractions_64.npy
 └── hcp_split.csv
 ```
 
@@ -155,6 +161,7 @@ To train the patch-based diffusion model, we need the reconstructed training ima
 │       ├── T1w_encoded_rescaled.npy
 │       └── T1w_reconstructed.nii.gz
 ├── ...
+├── fractions_64.npy
 └── hcp_split.csv
 ```
 
@@ -180,5 +187,5 @@ cd latent_diffusion_patch_diffusion/src/python/testing
 bash recover_hcp3d_generated.sh
 ```
 
-Adjust the parameters in the script to change input data or checkpoints.
+Adjust the parameters in the script to change input data or checkpoints. Checkpoint for trained RealDeal model is available. Checkpoint name is `checkpoints/checkpoint2690.pth`.
 
