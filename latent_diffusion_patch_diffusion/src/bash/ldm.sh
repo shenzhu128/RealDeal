@@ -1,0 +1,11 @@
+python ../python/training/train_ldm.py \
+--seed=42 \
+--output_dir="/home/sz9jt/manifold/sz9jt/realdela/diffusion" \
+--run_dir="diffusion_tomhcp3dlatent_4ch" \
+--config_file="../../configs/ldm/diffusion_tomhcp3dlatent_4ch.yaml" \
+--batch_size=4 \
+--num_workers=4 \
+--project="HCP3D_latent_diffusion" \
+--n_epochs=2000 \
+--eval_freq=50 \
+--enable_wandb=0

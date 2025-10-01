@@ -1,0 +1,5 @@
+Download checkpoints at: 
+
+https://drive.google.com/drive/folders/1opL9r4nqrAh4fqMVL3Qr_UajNoX8-lJI?usp=sharing
+
+Place the downloaded checkpoints in this folder.

@@ -1,0 +1,33 @@
+ldm:
+  base_lr: 0.000025
+  params:
+    spatial_dims: 3
+    in_channels: 3
+    out_channels: 3
+    num_res_blocks: 2
+    num_channels: [256, 512, 768]
+    attention_levels: [False, True, True]
+    with_conditioning: False
+    # cross_attention_dim: None
+    num_head_channels: [0, 512, 768]
+  scheduler:
+    schedule: "scaled_linear_beta"
+    num_train_timesteps: 1000
+    beta_start: 0.0015
+    beta_end: 0.0205
+    prediction_type: "v_prediction"
+dataset:
+  target: "datasets.ldmp_encodings.EightMMEncodingsFixScaledDataset"
+  params:
+    data_paths: "/home/sz9jt/data/t1w_processed/outputs_8mm/2025-01-20T02_37_40_medil-interp_t1w-brain_pretrained_refined-train/train_val_encodings"
+    transform: None
+    fixed_scale: 0.1
+    output_shape:
+      - 28
+      - 28
+      - 28
+    if_sample: True
+    scale_each_ch: True
+    ch1_fixed_scale: 0.25
+    ch2_fixed_scale: 0.083
+    ch3_fixed_scale: 0.33

@@ -1,0 +1,12 @@
+/scratch/sz9jt/.conda/envs/generativebrain/bin/python /home/sz9jt/projects/generative_brain/src/python/training/train_aekl.py \
+--model="AutoencoderKLDownsampleControl" \
+--seed=42 \
+--run_dir="lidc_aekl_v2_4x_4ch" \
+--output_dir="/home/sz9jt/data/generative_lidc" \
+--config_file="/home/sz9jt/projects/generative_brain/configs/stage1/aekl_v2_4x_4ch.yaml" \
+--batch_size=14 \
+--n_epochs=100 \
+--adv_start=25 \
+--eval_freq=1 \
+--num_workers=4 \
+--root_dir="/home/sz9jt/data/t1w_processed/outputs"

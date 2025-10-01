@@ -1,0 +1,26 @@
+ldm:
+  base_lr: 0.000025
+  params:
+    spatial_dims: 3
+    in_channels: 3
+    out_channels: 1
+    num_res_blocks: 2
+    num_channels: [128, 256, 256]
+    attention_levels: [False, False, True]
+    with_conditioning: True
+    cross_attention_dim: 64
+    num_head_channels: [0, 64, 256]
+    # for coordinate embedding
+    coord_input_dim: 3
+    coord_hidden_dim: 64
+  scheduler:
+    schedule: "scaled_linear_beta"
+    num_train_timesteps: 1000
+    beta_start: 0.0015
+    beta_end: 0.0205
+    prediction_type: "epsilon"
+dataset:
+  target: "datasets.hcp3d_uncropping_ds.TomsHCP3DTrainPatchUncroppingDataset"
+  params:
+    root_dir: "/home/sz9jt/manifold/sz9jt/HCP_preprocess"
+    full_mask_prob: 0.1

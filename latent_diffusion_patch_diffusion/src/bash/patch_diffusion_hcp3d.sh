@@ -1,0 +1,12 @@
+python ../python/training/train_cond_diffusion_modify_group_norm.py \
+--seed=42 \
+--output_dir="/home/sz9jt/manifold/sz9jt/realdeal/cond_diffusion" \
+--run_dir="diffusion_tomshcp3d_maskedcond_finetune_modify_group_norm" \
+--config_file="../../configs/cond_diff/diffusion_tomshcp3d_maskedcond_finetune_modify_group_norm.yaml" \
+--batch_size=32 \
+--num_workers=4 \
+--project="cond-diffusion" \
+--n_epochs=3000 \
+--eval_freq=10 \
+--enable_wandb=0 \
+--task="uncropping"
