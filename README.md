@@ -47,6 +47,7 @@ To cite our work, you can use:
 
 ### News
 **Oct. 1, 2025:** Added the required file `fractions_64.npy` in Google Drive.
+
 **Sept. 30, 2025:** Added script for autoencoder, latent diffusion, and patch-based diffusion.
 
 ---
